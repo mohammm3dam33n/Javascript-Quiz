@@ -1,0 +1,72 @@
+/* Intro to JavaScript QUIZ[SOLVED]
+Chapter - Functions
+Total Quiz-6
+*/
+
+Quiz-1
+Declare a function called laugh() that returns "hahahahahahahahahaha!".
+ Print the value returned from the laugh() function to the console.
+
+ Code:
+ function laugh() {
+return "hahahahahahahahahaha!";
+}
+
+console.log(laugh());
+
+Output:
+hahahahahahahahahaha!
+
+Quiz-2
+Write a function called laugh() that takes one parameter,
+num that represents the number of "ha"s to return.
+
+Code:
+function laugh(num) {
+    var ha='';
+    for(var i=0;i<num;i=i+1) {
+        ha+="ha";
+        string=ha+"!";
+    }
+    return string;
+}
+
+console.log(laugh(3));
+
+Output:
+hahaha!
+
+Quiz-3
+Create a function called buildTriangle()
+that will accept an input (the triangle at its widest width) and will build a triangle.
+
+Code:
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+    line += "* "
+  }
+  return line + "\n";
+}
+
+function buildTriangle(num){
+    var buildtriangle="";
+    for (var i=1;i<=num;i++){
+        var make=makeLine(i);
+        buildtriangle += make;
+    }
+    return buildtriangle;
+}
+console.log(buildTriangle(10));
+
+Output:
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
+* * * * * * *
+* * * * * * * *
+* * * * * * * * *
+* * * * * * * * * *

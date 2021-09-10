@@ -1,0 +1,210 @@
+/* Intro to JavaScript QUIZ[SOLVED]
+Chapter - Conditionals
+Total Quiz- 8
+*/
+
+Quiz-1
+Write an if...else statement that:
+prints "even" if the number is an even number
+prints "odd" if the number is an odd number
+
+Code:
+var number = 12;
+
+if (number% 2 === 0) {
+    console.log("even")
+} else {
+ console.log("odd")
+}
+
+Output:
+even
+
+Quiz:
+Write a series of conditional statements that:
+prints "not a group" if musicians is less than or equal to 0
+prints "solo" if musicians is equal to 1
+prints "duet" if musicians is equal to 2
+prints "trio" if musicians is equal to 3
+prints "quartet" if musicians is equal to 4
+prints "this is a large group" if musicians is greater than 4
+
+Code:
+var musicians = 20;
+if (musicians === 1) {
+    console.log("solo");
+}// your code goes here
+else if (musicians === 2) {
+    console.log("duet");
+}// your code goes here
+else if (musicians === 3) {
+    console.log("trio");
+}// your code goes here
+else if (musicians === 4) {
+    console.log("quartet");
+}// your code goes here
+else if (musicians > 4) {
+    console.log("this is a large group");
+}// your code goes here
+
+else {
+    console.log("not a group");
+}
+
+Output:
+this is a large group
+
+Quiz-3
+A murder mystery is a game typically played at parties wherein one of the partygoers is secretly, and unknowingly, playing a murderer,
+and the other attendees must determine who among them is the criminal.
+Since this might be your first time playing a murder mystery, we've simplified things quite a bit to make it easier. Here's what we know! In this murder mystery there are:
+
+four rooms: the ballroom, gallery, billiards room, and dining room,
+four weapons: poison, a trophy, a pool stick, and a knife,
+and four suspects: Mr. Parkes, Ms. Van Cleve, Mrs. Sparr, and Mr. Kalehoff.
+We also know that each weapon corresponds to a particular room, so...
+
+the poison belongs to the ballroom,
+the trophy belongs to the gallery,
+the pool stick belongs to the billiards room,
+and the knife belongs to the dining room.
+And we know that each suspect was located in a specific room at the time of the murder.
+
+Mr. Parkes was located in the dining room.
+Ms. Van Cleve was located in the gallery.
+Mrs. Sparr was located in the billiards room.
+Mr. Kalehoff was located in the ballroom.
+To help solve this mystery, write a combination of conditional statements that:
+
+sets the value of weapon based on the room and
+sets the value of solved to true if the value of room matches the suspect's room
+
+Code:
+var room = "gallery";
+var suspect = "Ms. Van Cleve";
+var weapon = "";
+var solved = false;
+
+if (room === "dining room" && suspect === "Mr. Parkes") {
+    weapon = "knife";
+    solved=true;
+
+} else if (room === "billiards room" && suspect === "Mrs. Sparr") {
+    weapon = "pool stick";
+    solved=true;
+
+
+} else if (room === "gallery" &&  suspect === "Ms. Van Cleve") {
+    weapon = "trophy";
+    solved=true;
+
+}  else if (room === "ballroom" &&  suspect === "Mr. Kalehoff") {
+    weapon= "poison";
+    solved=true;
+}
+
+if(solved) {
+    console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
+}
+
+Output:
+Ms. Van Cleve did it in the gallery with the trophy!
+
+Quiz-4
+If you're like me, finding the right size t-shirt can sometimes be a challenge. What size am I? What's the difference between S (small), M (medium), and L (large)? I usually wear L, but what if I need an XL (extra large)?
+
+Code:
+var shirtWidth = 19;
+var shirtLength = 27;
+var shirtSleeve = 8.36;
+
+// your code goes here
+
+if (shirtWidth >=18 && shirtWidth <20 && shirtLength >=28 && shirtLength <29 && shirtSleeve >= 8.13 && shirtSleeve < 8.38) {
+    console.log("S");
+}
+else if (shirtWidth >=20 && shirtWidth <22 && shirtLength >=29 && shirtLength <30 && shirtSleeve >= 8.38 && shirtSleeve < 8.63) {
+    console.log("M");
+}
+else if (shirtWidth >=22 && shirtWidth <24 && shirtLength >=30 && shirtLength <31 && shirtSleeve >= 8.63 && shirtSleeve < 8.88) {
+    console.log("L");
+}
+else if (shirtWidth >=24 && shirtWidth <26 && shirtLength >=31 && shirtLength <33 && shirtSleeve >= 8.88 && shirtSleeve < 9.63) {
+    console.log("XL");
+}
+else if (shirtWidth >=26 && shirtWidth <28 && shirtLength >=33 && shirtLength <34 && shirtSleeve >= 9.63 && shirtSleeve < 10.13) {
+    console.log("2XL");
+}
+else if ((shirtWidth === 28) && (shirtLength === 34) && (shirtSleeve === 10.13)) {
+    console.log("3XL");
+}
+else {
+    console.log("N/A");
+}
+
+Output:
+N/A
+
+Quiz-5
+From the smallest of creatures to the largest of animals, inevitably every living, breathing thing must ingest other organisms to survive. This means that all animals will fall within one of the three consumer-based categories based on the types of food that they eat.
+
+Animals that eat only plants are called herbivores
+Animals that eat only other animals are called carnivores
+Animals that eat both plants and animals are called omnivores
+
+Code:
+var eatsPlants = false;
+var eatsAnimals = true;
+var category = (eatsPlants && eatsAnimals) ? "omnivore" : (eatsAnimals) ? "carnivore" : (eatsPlants) ? "herbivore" : undefined ;
+console.log(category);
+
+Output:
+carnivore
+
+Quiz-6
+Write a switch statement to set the average salary of a person
+based on their type of completed education.
+
+Code:
+var education = "no high school diploma";
+
+// set the value of this based on a person's education
+var salary;
+
+// your code goes here
+switch  (education) {
+    case "no high school diploma":
+        salary="$25,636/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a high school diploma":
+        salary="$35,256/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "an Associate's degree":
+        salary="$41,496/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Bachelor's degree":
+        salary="$59,124/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Master's degree":
+        salary="$69,732/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Professional degree":
+        salary="$89,960/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    case "a Doctoral degree":
+        salary="$84,396/year";
+        console.log("In 2015, a person with " +  education + " earned an average of " + salary.toLocaleString("en-US") + ".");
+        break;
+    default:
+        console.log ("nothing");
+        break;
+}
+
+Output:
+In 2015, a person with no high school diploma earned an average of $25,636/year.
