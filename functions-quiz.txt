@@ -78,3 +78,27 @@ Output:
     for (i = 0; i <= 10; i++) {
         console.log("* ".repeat(i))
     }
+
+
+
+/*
+ * Programming Quiz: Laugh (5-4)
+ */
+
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a variable `laugh`
+ * - Your code should include an anonymous function expression stored in the variable `laugh`
+ * - Your anonymous function expression should take one argument
+ * - Your anonymous function expression should return the correct number of `hahaha`\'s
+ */
+ var laugh = function(num) {
+        var laugh = "";
+        for (let i = 0; i < num; i++) {
+            laugh += "ha"
+
+        }
+        return laugh + "!"
+    }
+
+    console.log(laugh(10));
